@@ -1,0 +1,658 @@
+{
+	"info": {
+		"_postman_id": "81e8c1a9-bcbe-41b2-ba6a-7ee1493b853a",
+		"name": "nest-api-tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2530523"
+	},
+	"item": [
+		{
+			"name": "bookmark",
+			"item": [
+				{
+					"name": "bookmarks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"title\":\"Frank Yupanqui Allcca - Youtube\",\r\n    \"description\":\"Youtube channel\",\r\n    \"link\":\"https://www.youtube.com/channel/UCWAAUV5pt7h-tXimIXF_7KQ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/bookmarks",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"bookmarks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "bookmarks",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1,\r\n    \"title\":\"Frank Yupanqui Allcca - Youtube\",\r\n    \"description\":\"Youtube channel\",\r\n    \"link\":\"https://www.youtube.com/channel/UCWAAUV5pt7h-tXimIXF_7KQ\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/bookmarks",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"bookmarks"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "238"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ee-pmPkcLyXFV18rzocHuyq5+j9PqE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Aug 2022 00:54:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 14,\n    \"createdAt\": \"2022-08-10T00:54:17.833Z\",\n    \"updatedAt\": \"2022-08-10T00:54:17.834Z\",\n    \"title\": \"Frank Yupanqui Allcca - Youtube\",\n    \"description\": \"Youtube channel\",\n    \"link\": \"https://www.youtube.com/channel/UCWAAUV5pt7h-tXimIXF_7KQ\",\n    \"userId\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "bookmarks/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Frank Yupanqui Allcca - LinkedIn\",\r\n    \"description\":  \"LinkedIn profile\",\r\n    \"link\": \"https://www.linkedin.com/in/fyupanquia/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/bookmarks/14",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"bookmarks",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "bookmarks/:id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Frank Yupanqui Allcca - LinkedIn\",\r\n    \"description\":  \"LinkedIn profile\",\r\n    \"link\": \"https://www.linkedin.com/in/fyupanquia/\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/bookmarks/14",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"bookmarks",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-BImH6WGfNoDwHRjXp3SIj3Via6M\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Aug 2022 00:56:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 14,\n    \"createdAt\": \"2022-08-10T00:54:17.833Z\",\n    \"updatedAt\": \"2022-08-10T00:56:00.302Z\",\n    \"title\": \"Frank Yupanqui Allcca - LinkedIn\",\n    \"description\": \"LinkedIn profile\",\n    \"link\": \"https://www.linkedin.com/in/fyupanquia/\",\n    \"userId\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "bookmarks/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/bookmarks/14",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"bookmarks",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "bookmarks/:id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/bookmarks/14",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"bookmarks",
+										"14"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Aug 2022 00:57:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "bookmarks/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/bookmarks/14",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"bookmarks",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "bookmarks/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/bookmarks/14",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"bookmarks",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-BImH6WGfNoDwHRjXp3SIj3Via6M\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Aug 2022 00:56:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 14,\n    \"createdAt\": \"2022-08-10T00:54:17.833Z\",\n    \"updatedAt\": \"2022-08-10T00:56:00.302Z\",\n    \"title\": \"Frank Yupanqui Allcca - LinkedIn\",\n    \"description\": \"LinkedIn profile\",\n    \"link\": \"https://www.linkedin.com/in/fyupanquia/\",\n    \"userId\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "bookmarks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/bookmarks",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"bookmarks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "bookmarks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/bookmarks",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"bookmarks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "225"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e1-FMBbdpEFkQser8nDzATkDBLkohY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Aug 2022 00:56:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 14,\n        \"createdAt\": \"2022-08-10T00:54:17.833Z\",\n        \"updatedAt\": \"2022-08-10T00:56:00.302Z\",\n        \"title\": \"Frank Yupanqui Allcca - LinkedIn\",\n        \"description\": \"LinkedIn profile\",\n        \"link\": \"https://www.linkedin.com/in/fyupanquia/\",\n        \"userId\": 3\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"wyupanquia@outlook.com\",\r\n    \"password\":\"123\",\r\n    \"name\": \"william\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/auth/signup",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable(\"ACCESS_TOKEN\", JSON.parse(responseBody).access_token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"wyupanquia@outlook.com\",\r\n    \"password\":\"123\",\r\n    \"name\": \"william\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/auth/signin",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"wyupanquia@outlook.com\",\r\n    \"password\":\"123\",\r\n    \"name\": \"william\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/auth/signin",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ca-agKob2KxuHy898v3/DaJcjH8fe8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Aug 2022 00:49:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoid3l1cGFucXVpYUBvdXRsb29rLmNvbSIsImlhdCI6MTY2MDA5MjU4MywiZXhwIjoxNjYwMDkzNDgzfQ.uhI5ev7r7tKVCYhTutxnHbEGzARKLVErBJyrwXr0k2Q\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "users/me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/users/me",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "users/me",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/users/me",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"users",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"98-NxYtISKW9D3bLo5RksYYHja8Mf4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Aug 2022 00:51:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"createdAt\": \"2022-08-08T19:26:40.730Z\",\n    \"updatedAt\": \"2022-08-08T19:26:40.731Z\",\n    \"email\": \"wyupanquia@outlook.com\",\n    \"firstName\": null,\n    \"lastName\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
